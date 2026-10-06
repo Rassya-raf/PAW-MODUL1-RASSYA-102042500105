@@ -1,0 +1,275 @@
+/* ===== Dasar ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fa;
+    color: #171923;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: #4a5568;
+}
+
+.nav-menu a:hover {
+    color: #171923;
+}
+
+/* ===== Hero ===== */
+.hero {
+    background: #171923;
+    color: #ffffff;
+    margin-top: 30px;
+    padding: 70px 50px;
+    border-radius: 20px;
+}
+
+.hero-label {
+    font-size: 13px;
+    color: #a0aec0;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.hero p {
+    color: #cbd5e0;
+    margin-bottom: 25px;
+}
+
+.hero-button {
+    display: inline-block;
+    background: #ffffff;
+    color: #171923;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.hero-button:hover {
+    opacity: 0.85;
+}
+
+/* ===== Header katalog ===== */
+.catalog-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 60px 0 25px;
+}
+
+.section-label {
+    font-size: 13px;
+    color: #718096;
+}
+
+.catalog-head h2 {
+    font-size: 28px;
+}
+
+.total-box {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+/* ===== Grid produk ===== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding-bottom: 60px;
+}
+
+/* ===== Card produk ===== */
+.product-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.2s ease;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.category {
+    color: #718096;
+}
+
+.discount-badge {
+    background: #fff5f5;
+    color: #c53030;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+}
+
+.price-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-old {
+    color: #a0aec0;
+    text-decoration: line-through;
+    font-size: 13px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.stock-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #edf2f7;
+    padding-top: 14px;
+    font-size: 14px;
+}
+
+.status {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 10px;
+}
+
+.status-ready {
+    background: #e6f7ec;
+    color: #1f7a3d;
+}
+
+.status-empty {
+    background: #fdeaea;
+    color: #c53030;
+}
+
+/* ===== Tombol ===== */
+.buy-button {
+    width: 100%;
+    background: #171923;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    opacity: 0.85;
+}
+
+.buy-button:disabled {
+    background: #cbd5e0;
+    color: #718096;
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+/* ===== Footer ===== */
+.footer {
+    background: #171923;
+    color: #a0aec0;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 14px;
+}
+
+/* ===== Responsive ===== */
+/* Tablet: 2 kolom */
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+}
+
+/* Smartphone: 1 kolom */
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 45px 25px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .catalog-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
